@@ -19,14 +19,14 @@ const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-main mb-6 leading-tight animate-fade-in">
             Seu negócio merece um{" "}
             <span className="text-primary">site que vende</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-            Crio sites profissionais que atraem clientes, geram confiança e 
+          <p className="text-lg md:text-xl text-text-muted mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in">
+            Criamos sites profissionais que atraem clientes, geram confiança e 
             aumentam suas vendas. Sem complicação técnica, apenas resultados.
           </p>
 
@@ -51,13 +51,12 @@ const Hero = () => {
           </div>
 
           {/* Social proof */}
-          <div className="mt-16 pt-10 border-t border-border/50 animate-fade-in">
-            <p className="text-muted-foreground mb-4 text-sm">Empresas que já confiam no meu trabalho</p>
+          <div className="mt-16 pt-10 border-t border-border animate-fade-in">
+            <p className="text-text-muted mb-4 text-sm">Empresas que já confiam em nosso trabalho</p>
             <div className="flex flex-wrap justify-center gap-8 opacity-60">
-              <span className="text-xl font-semibold text-foreground">TechBrasil</span>
-              <span className="text-xl font-semibold text-foreground">Loja Moda+</span>
-              <span className="text-xl font-semibold text-foreground">Clínica Vida</span>
-              <span className="text-xl font-semibold text-foreground">Café Aroma</span>
+              <span className="text-xl font-semibold text-text-main">Aurora Moda Femenina</span>
+              <span className="text-xl font-semibold text-text-main">Discover On</span>
+              <span className="text-xl font-semibold text-text-main">Vittah Clinic</span>
             </div>
           </div>
         </div>

@@ -31,30 +31,30 @@ const Benefits = () => {
           {/* Left column - Text */}
           <div>
             <span className="text-primary font-medium text-sm uppercase tracking-wider">
-              Por que me escolher?
+              Por que nos escolher?
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-main mt-3 mb-6">
               Não é sobre código.{" "}
               <span className="text-primary">É sobre seu sucesso.</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Entendo que você não quer saber de programação. Você quer um site 
-              bonito, rápido e que traga clientes. É exatamente isso que entrego.
+            <p className="text-lg text-text-muted mb-8 leading-relaxed">
+              Entendemos que você não quer saber de programação. Você quer um site 
+              bonito, rápido e que traga clientes. É exatamente isso que entregamos.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
-              <div className="text-center p-4 rounded-2xl bg-secondary/50">
-                <span className="text-3xl md:text-4xl font-bold text-primary">50+</span>
-                <p className="text-sm text-muted-foreground mt-1">Projetos entregues</p>
+              <div className="text-center p-4 rounded-2xl bg-surface border border-border shadow-soft">
+                <span className="text-3xl md:text-4xl font-bold text-primary">25+</span>
+                <p className="text-sm text-text-muted mt-1">Projetos entregues</p>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-secondary/50">
+              <div className="text-center p-4 rounded-2xl bg-surface border border-border shadow-soft">
                 <span className="text-3xl md:text-4xl font-bold text-primary">98%</span>
-                <p className="text-sm text-muted-foreground mt-1">Clientes satisfeitos</p>
+                <p className="text-sm text-text-muted mt-1">Clientes satisfeitos</p>
               </div>
-              <div className="text-center p-4 rounded-2xl bg-secondary/50">
+              <div className="text-center p-4 rounded-2xl bg-surface border border-border shadow-soft">
                 <span className="text-3xl md:text-4xl font-bold text-primary">3</span>
-                <p className="text-sm text-muted-foreground mt-1">Anos de experiência</p>
+                <p className="text-sm text-text-muted mt-1">Anos de experiência</p>
               </div>
             </div>
           </div>
@@ -64,15 +64,15 @@ const Benefits = () => {
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group"
+                className="p-6 rounded-2xl bg-surface border border-border hover:border-primary hover:shadow-hover transition-all duration-300 group"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                  <benefit.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                  <benefit.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-lg font-semibold text-text-main mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-text-muted text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

@@ -28,15 +28,20 @@ const Navbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50" 
+          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border" 
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold text-foreground">
-            Jeezle<span className="text-primary">Dev</span>
+          <a href="#" className="flex items-center">
+            <img 
+              src="/jeezledevlogo.svg" 
+              alt="Jeezle Dev" 
+              // Aumentamos a altura base e usamos 'scale' para ignorar as bordas invisíveis do Canva
+              className="h-16 md:h-20 w-auto object-contain scale-[1.0] md:scale-[1.1] origin-left"
+            />
           </a>
 
           {/* Desktop navigation */}
@@ -45,7 +50,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className="text-text-muted hover:text-text-main transition-colors font-medium"
               >
                 {link.label}
               </a>
@@ -65,22 +70,22 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className="w-6 h-6 text-text-main" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="w-6 h-6 text-text-main" />
             )}
           </button>
         </nav>
 
         {/* Mobile navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 bg-background/95 backdrop-blur-md animate-fade-in">
+          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                  className="text-text-muted hover:text-text-main transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

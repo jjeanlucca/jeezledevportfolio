@@ -2,153 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Design System do Portfólio Profissional
-  ----------------------------------------
-  Paleta: Fundo creme + Verde esmeralda + Textos escuros
-  Tipografia: DM Sans - moderna e profissional
-  
-  Todas as cores são definidas em HSL para consistência.
-*/
-
 @layer base {
-  :root {
-    /* Fundo creme acolhedor */
-    --background: 40 33% 98%;
-    --foreground: 220 25% 15%;
-
-    /* Cards em branco puro */
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 15%;
-
-    /* Verde esmeralda - cor principal de destaque */
-    --primary:  216 100% 16%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Secundário - tom suave para backgrounds */
-    --secondary: 216 60% 28%;
-    --secondary-foreground: 210 40% 98%;
-
-    /* Muted - para textos secundários */
-    --muted: 40 20% 92%;
-    --muted-foreground: 220 10% 45%;
-
-    /* Accent - destaque sutil */
-    --accent:216 80% 45%;
-    --accent-foreground: 160 60% 30%;
-
-    /* Destructive - erros e alertas */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-
-    /* Bordas e inputs */
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 160 60% 35%;
-
-    --radius: 0.75rem;
-
-    /* Sidebar (não usado neste projeto, mas mantido por consistência) */
-    --sidebar-background: 40 33% 98%;
-    --sidebar-foreground: 220 25% 15%;
-    --sidebar-primary: 160 60% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 40% 92%;
-    --sidebar-accent-foreground: 160 60% 30%;
-    --sidebar-border: 40 15% 88%;
-    --sidebar-ring: 160 60% 35%;
-  }
-
-  .dark {
-    /* Modo escuro - mantido como fallback */
-    --background:  216 80% 55%;
-    --foreground:  216 80% 55%;
-
-    --card: 220 25% 13%;
-    --card-foreground: 40 20% 95%;
-
-    --popover: 220 25% 13%;
-    --popover-foreground: 40 20% 95%;
-
-    --primary: 160 55% 45%;
-    --primary-foreground: 220 25% 10%;
-
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 40 20% 95%;
-
-    --muted: 220 20% 18%;
-    --muted-foreground: 40 10% 60%;
-
-    --accent: 160 30% 20%;
-    --accent-foreground: 160 55% 45%;
-
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 160 55% 45%;
-
-    --sidebar-background: 220 25% 10%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 160 55% 45%;
-    --sidebar-primary-foreground: 220 25% 10%;
-    --sidebar-accent: 160 30% 20%;
-    --sidebar-accent-foreground: 160 55% 45%;
-    --sidebar-border: 220 20% 20%;
-    --sidebar-ring: 160 55% 45%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  body {
+    /* Forçando a cor direto no CSS para destravar o erro */
+    background-color: #F6F3EA;
+    color: #1F2937;
+    @apply antialiased;
   }
 
   html {
     scroll-behavior: smooth;
   }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: "DM Sans", system-ui, sans-serif;
-  }
 }
 
-/* Animações customizadas */
+/* Animações simples que você já usava */
 @layer utilities {
-  /* Fade in com movimento suave */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Animação de pulse suave para decorações */
-  .animate-pulse-soft {
-    animation: pulseSoft 4s ease-in-out infinite;
-  }
-
-  @keyframes pulseSoft {
-    0%, 100% {
-      opacity: 0.4;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.6;
-      transform: scale(1.05);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
